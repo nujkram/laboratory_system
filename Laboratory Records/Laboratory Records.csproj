@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A7F7129-ABD7-409F-A6B0-FAB4974933E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Laboratory_Records</RootNamespace>
+    <AssemblyName>Laboratory Records</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="components\Connection.cs" />
+    <Compile Include="components\Values.cs" />
+    <Compile Include="forms\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddChemistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddChemistry.Designer.cs">
+      <DependentUpon>frmAddChemistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddHematology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddHematology.Designer.cs">
+      <DependentUpon>frmAddHematology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddMisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddMisc.Designer.cs">
+      <DependentUpon>frmAddMisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddParasitology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddParasitology.Designer.cs">
+      <DependentUpon>frmAddParasitology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddUrinalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\create\frmAddUrinalysis.Designer.cs">
+      <DependentUpon>frmAddUrinalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\frmLabMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\frmLabMenu.Designer.cs">
+      <DependentUpon>frmLabMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateChemistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateChemistry.Designer.cs">
+      <DependentUpon>frmUpdateChemistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateHematology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateHematology.Designer.cs">
+      <DependentUpon>frmUpdateHematology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateMisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateMisc.Designer.cs">
+      <DependentUpon>frmUpdateMisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateParasitology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateParasitology.Designer.cs">
+      <DependentUpon>frmUpdateParasitology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateUrinalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lab\update\frmUpdateUrinalysis.Designer.cs">
+      <DependentUpon>frmUpdateUrinalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\patients\frmAddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\patients\frmAddPatient.Designer.cs">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\patients\frmPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\patients\frmPatients.Designer.cs">
+      <DependentUpon>frmPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\patients\frmUpdatePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\patients\frmUpdatePatient.Designer.cs">
+      <DependentUpon>frmUpdatePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\records\frmAddRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\records\frmAddRecord.Designer.cs">
+      <DependentUpon>frmAddRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\records\frmRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\records\frmRecords.Designer.cs">
+      <DependentUpon>frmRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\records\frmUpdateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\records\frmUpdateRecord.Designer.cs">
+      <DependentUpon>frmUpdateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerChemistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerChemistry.Designer.cs">
+      <DependentUpon>frmReportViewerChemistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerHematology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerHematology.Designer.cs">
+      <DependentUpon>frmReportViewerHematology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerMiscellaneous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerMiscellaneous.Designer.cs">
+      <DependentUpon>frmReportViewerMiscellaneous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerParasitology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerParasitology.Designer.cs">
+      <DependentUpon>frmReportViewerParasitology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordChemistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordChemistry.Designer.cs">
+      <DependentUpon>frmReportViewerRecordChemistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordHematology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordHematology.Designer.cs">
+      <DependentUpon>frmReportViewerRecordHematology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordMiscellaneous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordMiscellaneous.Designer.cs">
+      <DependentUpon>frmReportViewerRecordMiscellaneous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordParasitology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordParasitology.Designer.cs">
+      <DependentUpon>frmReportViewerRecordParasitology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordUrinalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerRecordUrinalysis.Designer.cs">
+      <DependentUpon>frmReportViewerRecordUrinalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerUrinalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmReportViewerUrinalysis.Designer.cs">
+      <DependentUpon>frmReportViewerUrinalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\users\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\users\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\users\frmUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\users\frmUpdateUser.Designer.cs">
+      <DependentUpon>frmUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\users\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\users\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="functions\Chemistry.cs" />
+    <Compile Include="functions\Hematology.cs" />
+    <Compile Include="functions\Laboratory.cs" />
+    <Compile Include="functions\Log.cs" />
+    <Compile Include="functions\Login.cs" />
+    <Compile Include="functions\Miscellaneous.cs" />
+    <Compile Include="functions\Parasitology.cs" />
+    <Compile Include="functions\Patient.cs" />
+    <Compile Include="functions\Profile.cs" />
+    <Compile Include="functions\Record.cs" />
+    <Compile Include="functions\Report.cs" />
+    <Compile Include="functions\Transaction.cs" />
+    <Compile Include="functions\Urinalysis.cs" />
+    <Compile Include="functions\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Records.cs">
+      <DependentUpon>Records.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Records.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Records.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\create\frmAddChemistry.resx">
+      <DependentUpon>frmAddChemistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\create\frmAddHematology.resx">
+      <DependentUpon>frmAddHematology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\create\frmAddMisc.resx">
+      <DependentUpon>frmAddMisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\create\frmAddParasitology.resx">
+      <DependentUpon>frmAddParasitology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\create\frmAddUrinalysis.resx">
+      <DependentUpon>frmAddUrinalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\frmLabMenu.resx">
+      <DependentUpon>frmLabMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\update\frmUpdateChemistry.resx">
+      <DependentUpon>frmUpdateChemistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\update\frmUpdateHematology.resx">
+      <DependentUpon>frmUpdateHematology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\update\frmUpdateMisc.resx">
+      <DependentUpon>frmUpdateMisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\update\frmUpdateParasitology.resx">
+      <DependentUpon>frmUpdateParasitology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lab\update\frmUpdateUrinalysis.resx">
+      <DependentUpon>frmUpdateUrinalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\patients\frmAddPatient.resx">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\patients\frmPatients.resx">
+      <DependentUpon>frmPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\patients\frmUpdatePatient.resx">
+      <DependentUpon>frmUpdatePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\records\frmAddRecord.resx">
+      <DependentUpon>frmAddRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\records\frmRecords.resx">
+      <DependentUpon>frmRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\records\frmUpdateRecord.resx">
+      <DependentUpon>frmUpdateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerChemistry.resx">
+      <DependentUpon>frmReportViewerChemistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerHematology.resx">
+      <DependentUpon>frmReportViewerHematology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerMiscellaneous.resx">
+      <DependentUpon>frmReportViewerMiscellaneous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerParasitology.resx">
+      <DependentUpon>frmReportViewerParasitology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerRecordChemistry.resx">
+      <DependentUpon>frmReportViewerRecordChemistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerRecordHematology.resx">
+      <DependentUpon>frmReportViewerRecordHematology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerRecordMiscellaneous.resx">
+      <DependentUpon>frmReportViewerRecordMiscellaneous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerRecordParasitology.resx">
+      <DependentUpon>frmReportViewerRecordParasitology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerRecordUrinalysis.resx">
+      <DependentUpon>frmReportViewerRecordUrinalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmReportViewerUrinalysis.resx">
+      <DependentUpon>frmReportViewerUrinalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\users\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\users\frmUpdateUser.resx">
+      <DependentUpon>frmUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\users\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reports\miscellaneous\rptAntiHAV.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptAntiHBs.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptASOT.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptCRP.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptDengueDuo.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptGramStain.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptHBsAg.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptHPylori.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptKOH.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptPregnancyTest.rdlc" />
+    <EmbeddedResource Include="reports\miscellaneous\rptRPR.rdlc" />
+    <EmbeddedResource Include="reports\rptChemistry.rdlc" />
+    <EmbeddedResource Include="reports\rptHematology.rdlc" />
+    <EmbeddedResource Include="reports\rptParasitology.rdlc" />
+    <EmbeddedResource Include="reports\rptReportChemistry.rdlc" />
+    <EmbeddedResource Include="reports\rptReportHematology.rdlc" />
+    <EmbeddedResource Include="reports\rptReportMiscellaneous.rdlc" />
+    <EmbeddedResource Include="reports\rptReportParasitology.rdlc" />
+    <EmbeddedResource Include="reports\rptReportUrinalysis.rdlc" />
+    <EmbeddedResource Include="reports\rptUrinalysis.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Records.xsc">
+      <DependentUpon>Records.xsd</DependentUpon>
+    </None>
+    <None Include="Records.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Records.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Records.xss">
+      <DependentUpon>Records.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285636 - book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285658 - blue folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\299068 - add sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285648 - group user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285645 - user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285636 - book1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

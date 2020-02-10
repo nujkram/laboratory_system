@@ -1,0 +1,44 @@
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\bin\Debug\Laboratory Records.exe.config
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\bin\Debug\Laboratory Records.exe
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\bin\Debug\Laboratory Records.pdb
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\bin\Debug\MetroFramework.Design.dll
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\bin\Debug\MetroFramework.dll
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\bin\Debug\MetroFramework.Fonts.dll
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory Records.csprojResolveAssemblyReference.cache
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.frmDashboard.resources
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.frmLogin.resources
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.Properties.Resources.resources
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory Records.csproj.GenerateResource.Cache
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory Records.exe
+c:\users\xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory Records.pdb
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.patients.frmAddPatient.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.patients.frmPatients.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.patients.frmUpdatePatient.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.records.frmAddRecord.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.frmLabMenu.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.frmAddChemistry.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerChemistry.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\RdlCompile.cache
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\RdlCompile.compiled
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.frmAddParasitology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerParasitology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.frmAddUrinalysis.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerUrinalysis.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.frmAddHematology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerHematology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.frmAddMisc.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerMiscellaneous.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.users.frmUsers.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.users.frmAddUser.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.users.frmUpdateUser.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.records.frmRecords.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.records.frmUpdateRecord.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerRecordChemistry.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerRecordHematology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.update.frmUpdateChemistry.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.update.frmUpdateHematology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.update.frmUpdateParasitology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.update.frmUpdateUrinalysis.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.lab.update.frmUpdateMisc.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerRecordParasitology.resources
+C:\Users\Xielwein\documents\visual studio 2013\Projects\Laboratory Records\Laboratory Records\obj\Debug\Laboratory_Records.forms.reports.frmReportViewerRecordUrinalysis.resources
