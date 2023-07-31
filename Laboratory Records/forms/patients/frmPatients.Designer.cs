@@ -144,6 +144,7 @@
             this.lblParaColor = new MetroFramework.Controls.MetroLabel();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.grpUrinalysis = new System.Windows.Forms.GroupBox();
+            this.btnUriUpdate = new MetroFramework.Controls.MetroButton();
             this.metroLabel93 = new MetroFramework.Controls.MetroLabel();
             this.lblUriTriHominis = new MetroFramework.Controls.MetroLabel();
             this.metroLabel88 = new MetroFramework.Controls.MetroLabel();
@@ -248,6 +249,7 @@
             this.lblHemaHemoglobin = new MetroFramework.Controls.MetroLabel();
             this.metroLabel110 = new MetroFramework.Controls.MetroLabel();
             this.grpMiscellaneous = new System.Windows.Forms.GroupBox();
+            this.btnMiscUpdate = new MetroFramework.Controls.MetroButton();
             this.lblMiscSpecimen = new MetroFramework.Controls.MetroLabel();
             this.metroLabel46 = new MetroFramework.Controls.MetroLabel();
             this.lblMiscMedTech = new MetroFramework.Controls.MetroLabel();
@@ -266,8 +268,8 @@
             this.lblMiscExam = new MetroFramework.Controls.MetroLabel();
             this.metroLabel148 = new MetroFramework.Controls.MetroLabel();
             this.btnUpdateRecord = new MetroFramework.Controls.MetroButton();
-            this.btnUriUpdate = new MetroFramework.Controls.MetroButton();
-            this.btnMiscUpdate = new MetroFramework.Controls.MetroButton();
+            this.cboYear = new MetroFramework.Controls.MetroComboBox();
+            this.grpEmpty = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridRecords)).BeginInit();
             this.grpPatientInfo.SuspendLayout();
@@ -398,9 +400,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridPatients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridPatients.RowHeadersWidth = 51;
             this.gridPatients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridPatients.Size = new System.Drawing.Size(284, 599);
+            this.gridPatients.Size = new System.Drawing.Size(301, 599);
             this.gridPatients.TabIndex = 5;
             this.gridPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatients_CellClick);
             this.gridPatients.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridPatients_KeyDown);
@@ -435,7 +438,7 @@
             this.gridRecords.EnableHeadersVisualStyles = false;
             this.gridRecords.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridRecords.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridRecords.Location = new System.Drawing.Point(320, 121);
+            this.gridRecords.Location = new System.Drawing.Point(337, 119);
             this.gridRecords.MultiSelect = false;
             this.gridRecords.Name = "gridRecords";
             this.gridRecords.ReadOnly = true;
@@ -448,6 +451,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridRecords.RowHeadersWidth = 51;
             this.gridRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridRecords.Size = new System.Drawing.Size(201, 513);
@@ -477,16 +481,16 @@
             // 
             // 
             this.txtKeyword.CustomButton.Image = null;
-            this.txtKeyword.CustomButton.Location = new System.Drawing.Point(390, 1);
+            this.txtKeyword.CustomButton.Location = new System.Drawing.Point(257, 2);
             this.txtKeyword.CustomButton.Name = "";
-            this.txtKeyword.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtKeyword.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.txtKeyword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtKeyword.CustomButton.TabIndex = 1;
             this.txtKeyword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtKeyword.CustomButton.UseSelectable = true;
             this.txtKeyword.CustomButton.Visible = false;
             this.txtKeyword.Lines = new string[0];
-            this.txtKeyword.Location = new System.Drawing.Point(320, 95);
+            this.txtKeyword.Location = new System.Drawing.Point(337, 89);
             this.txtKeyword.MaxLength = 32767;
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.PasswordChar = '\0';
@@ -496,7 +500,7 @@
             this.txtKeyword.SelectionLength = 0;
             this.txtKeyword.SelectionStart = 0;
             this.txtKeyword.ShortcutsEnabled = true;
-            this.txtKeyword.Size = new System.Drawing.Size(412, 23);
+            this.txtKeyword.Size = new System.Drawing.Size(279, 24);
             this.txtKeyword.TabIndex = 1;
             this.txtKeyword.UseSelectable = true;
             this.txtKeyword.WaterMark = "Search by First Name, Middle Name, Last Name";
@@ -509,7 +513,7 @@
             this.lblPatientCount.AutoSize = true;
             this.lblPatientCount.Location = new System.Drawing.Point(30, 70);
             this.lblPatientCount.Name = "lblPatientCount";
-            this.lblPatientCount.Size = new System.Drawing.Size(90, 19);
+            this.lblPatientCount.Size = new System.Drawing.Size(94, 20);
             this.lblPatientCount.TabIndex = 8;
             this.lblPatientCount.Text = "Patient Count:";
             // 
@@ -701,7 +705,7 @@
             this.lblChemStat.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemStat.Location = new System.Drawing.Point(260, 32);
             this.lblChemStat.Name = "lblChemStat";
-            this.lblChemStat.Size = new System.Drawing.Size(21, 19);
+            this.lblChemStat.Size = new System.Drawing.Size(21, 20);
             this.lblChemStat.TabIndex = 44;
             this.lblChemStat.Text = "--";
             // 
@@ -710,7 +714,7 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Location = new System.Drawing.Point(171, 32);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(86, 20);
             this.metroLabel19.TabIndex = 43;
             this.metroLabel19.Text = "Stat/Routine:";
             // 
@@ -720,7 +724,7 @@
             this.lblChemCalcium.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemCalcium.Location = new System.Drawing.Point(444, 202);
             this.lblChemCalcium.Name = "lblChemCalcium";
-            this.lblChemCalcium.Size = new System.Drawing.Size(21, 19);
+            this.lblChemCalcium.Size = new System.Drawing.Size(21, 20);
             this.lblChemCalcium.TabIndex = 42;
             this.lblChemCalcium.Text = "--";
             // 
@@ -730,7 +734,7 @@
             this.lblChemPotassium.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemPotassium.Location = new System.Drawing.Point(444, 183);
             this.lblChemPotassium.Name = "lblChemPotassium";
-            this.lblChemPotassium.Size = new System.Drawing.Size(21, 19);
+            this.lblChemPotassium.Size = new System.Drawing.Size(21, 20);
             this.lblChemPotassium.TabIndex = 41;
             this.lblChemPotassium.Text = "--";
             // 
@@ -740,7 +744,7 @@
             this.lblChemSodium.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemSodium.Location = new System.Drawing.Point(444, 164);
             this.lblChemSodium.Name = "lblChemSodium";
-            this.lblChemSodium.Size = new System.Drawing.Size(21, 19);
+            this.lblChemSodium.Size = new System.Drawing.Size(21, 20);
             this.lblChemSodium.TabIndex = 40;
             this.lblChemSodium.Text = "--";
             // 
@@ -750,7 +754,7 @@
             this.lblChemSGPT.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemSGPT.Location = new System.Drawing.Point(444, 145);
             this.lblChemSGPT.Name = "lblChemSGPT";
-            this.lblChemSGPT.Size = new System.Drawing.Size(21, 19);
+            this.lblChemSGPT.Size = new System.Drawing.Size(21, 20);
             this.lblChemSGPT.TabIndex = 39;
             this.lblChemSGPT.Text = "--";
             // 
@@ -760,7 +764,7 @@
             this.lblChemSGOT.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemSGOT.Location = new System.Drawing.Point(444, 126);
             this.lblChemSGOT.Name = "lblChemSGOT";
-            this.lblChemSGOT.Size = new System.Drawing.Size(21, 19);
+            this.lblChemSGOT.Size = new System.Drawing.Size(21, 20);
             this.lblChemSGOT.TabIndex = 38;
             this.lblChemSGOT.Text = "--";
             // 
@@ -770,7 +774,7 @@
             this.lblChemLDL.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemLDL.Location = new System.Drawing.Point(444, 107);
             this.lblChemLDL.Name = "lblChemLDL";
-            this.lblChemLDL.Size = new System.Drawing.Size(21, 19);
+            this.lblChemLDL.Size = new System.Drawing.Size(21, 20);
             this.lblChemLDL.TabIndex = 37;
             this.lblChemLDL.Text = "--";
             // 
@@ -780,7 +784,7 @@
             this.lblChemHDL.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemHDL.Location = new System.Drawing.Point(444, 88);
             this.lblChemHDL.Name = "lblChemHDL";
-            this.lblChemHDL.Size = new System.Drawing.Size(21, 19);
+            this.lblChemHDL.Size = new System.Drawing.Size(21, 20);
             this.lblChemHDL.TabIndex = 36;
             this.lblChemHDL.Text = "--";
             // 
@@ -790,7 +794,7 @@
             this.lblChemTriglycerides.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemTriglycerides.Location = new System.Drawing.Point(444, 69);
             this.lblChemTriglycerides.Name = "lblChemTriglycerides";
-            this.lblChemTriglycerides.Size = new System.Drawing.Size(21, 19);
+            this.lblChemTriglycerides.Size = new System.Drawing.Size(21, 20);
             this.lblChemTriglycerides.TabIndex = 35;
             this.lblChemTriglycerides.Text = "--";
             // 
@@ -800,7 +804,7 @@
             this.lblChemCholesterol.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemCholesterol.Location = new System.Drawing.Point(260, 202);
             this.lblChemCholesterol.Name = "lblChemCholesterol";
-            this.lblChemCholesterol.Size = new System.Drawing.Size(21, 19);
+            this.lblChemCholesterol.Size = new System.Drawing.Size(21, 20);
             this.lblChemCholesterol.TabIndex = 34;
             this.lblChemCholesterol.Text = "--";
             // 
@@ -810,7 +814,7 @@
             this.lblChemUricAcid.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemUricAcid.Location = new System.Drawing.Point(260, 183);
             this.lblChemUricAcid.Name = "lblChemUricAcid";
-            this.lblChemUricAcid.Size = new System.Drawing.Size(21, 19);
+            this.lblChemUricAcid.Size = new System.Drawing.Size(21, 20);
             this.lblChemUricAcid.TabIndex = 33;
             this.lblChemUricAcid.Text = "--";
             // 
@@ -820,7 +824,7 @@
             this.lblChemCreatinine.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemCreatinine.Location = new System.Drawing.Point(260, 164);
             this.lblChemCreatinine.Name = "lblChemCreatinine";
-            this.lblChemCreatinine.Size = new System.Drawing.Size(21, 19);
+            this.lblChemCreatinine.Size = new System.Drawing.Size(21, 20);
             this.lblChemCreatinine.TabIndex = 32;
             this.lblChemCreatinine.Text = "--";
             // 
@@ -830,7 +834,7 @@
             this.lblChemUrea.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemUrea.Location = new System.Drawing.Point(260, 145);
             this.lblChemUrea.Name = "lblChemUrea";
-            this.lblChemUrea.Size = new System.Drawing.Size(21, 19);
+            this.lblChemUrea.Size = new System.Drawing.Size(21, 20);
             this.lblChemUrea.TabIndex = 31;
             this.lblChemUrea.Text = "--";
             // 
@@ -840,7 +844,7 @@
             this.lblChemHBa1c.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemHBa1c.Location = new System.Drawing.Point(260, 126);
             this.lblChemHBa1c.Name = "lblChemHBa1c";
-            this.lblChemHBa1c.Size = new System.Drawing.Size(21, 19);
+            this.lblChemHBa1c.Size = new System.Drawing.Size(21, 20);
             this.lblChemHBa1c.TabIndex = 30;
             this.lblChemHBa1c.Text = "--";
             // 
@@ -850,7 +854,7 @@
             this.lblChemPostPrandial.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemPostPrandial.Location = new System.Drawing.Point(260, 107);
             this.lblChemPostPrandial.Name = "lblChemPostPrandial";
-            this.lblChemPostPrandial.Size = new System.Drawing.Size(21, 19);
+            this.lblChemPostPrandial.Size = new System.Drawing.Size(21, 20);
             this.lblChemPostPrandial.TabIndex = 29;
             this.lblChemPostPrandial.Text = "--";
             // 
@@ -860,7 +864,7 @@
             this.lblChemRandom.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemRandom.Location = new System.Drawing.Point(260, 88);
             this.lblChemRandom.Name = "lblChemRandom";
-            this.lblChemRandom.Size = new System.Drawing.Size(21, 19);
+            this.lblChemRandom.Size = new System.Drawing.Size(21, 20);
             this.lblChemRandom.TabIndex = 28;
             this.lblChemRandom.Text = "--";
             // 
@@ -870,7 +874,7 @@
             this.lblChemFasting.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemFasting.Location = new System.Drawing.Point(260, 69);
             this.lblChemFasting.Name = "lblChemFasting";
-            this.lblChemFasting.Size = new System.Drawing.Size(21, 19);
+            this.lblChemFasting.Size = new System.Drawing.Size(21, 20);
             this.lblChemFasting.TabIndex = 27;
             this.lblChemFasting.Text = "--";
             // 
@@ -879,7 +883,7 @@
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Location = new System.Drawing.Point(121, 264);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(133, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(141, 20);
             this.metroLabel18.TabIndex = 26;
             this.metroLabel18.Text = "Medical Technologist:";
             // 
@@ -888,7 +892,7 @@
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Location = new System.Drawing.Point(178, 245);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(78, 20);
             this.metroLabel17.TabIndex = 25;
             this.metroLabel17.Text = "Pathologist:";
             // 
@@ -897,7 +901,7 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Location = new System.Drawing.Point(379, 202);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(61, 20);
             this.metroLabel16.TabIndex = 24;
             this.metroLabel16.Text = "Calcium:";
             // 
@@ -906,7 +910,7 @@
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Location = new System.Drawing.Point(368, 183);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel15.Size = new System.Drawing.Size(73, 20);
             this.metroLabel15.TabIndex = 23;
             this.metroLabel15.Text = "Potassium:";
             // 
@@ -915,7 +919,7 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Location = new System.Drawing.Point(381, 164);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(57, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(58, 20);
             this.metroLabel14.TabIndex = 22;
             this.metroLabel14.Text = "Sodium:";
             // 
@@ -924,7 +928,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Location = new System.Drawing.Point(369, 145);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(73, 20);
             this.metroLabel13.TabIndex = 21;
             this.metroLabel13.Text = "SGPT/ALT:";
             // 
@@ -933,7 +937,7 @@
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.Location = new System.Drawing.Point(365, 126);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(73, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(76, 20);
             this.metroLabel12.TabIndex = 20;
             this.metroLabel12.Text = "SGOT/AST:";
             // 
@@ -942,7 +946,7 @@
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.Location = new System.Drawing.Point(325, 107);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(120, 20);
             this.metroLabel11.TabIndex = 19;
             this.metroLabel11.Text = "LDL - Cholesterol:";
             // 
@@ -951,7 +955,7 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.Location = new System.Drawing.Point(322, 88);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(116, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(123, 20);
             this.metroLabel10.TabIndex = 18;
             this.metroLabel10.Text = "HDL - Cholesterol:";
             // 
@@ -960,7 +964,7 @@
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.Location = new System.Drawing.Point(355, 69);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(89, 20);
             this.metroLabel9.TabIndex = 17;
             this.metroLabel9.Text = "Triglycerides:";
             // 
@@ -969,7 +973,7 @@
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.Location = new System.Drawing.Point(176, 202);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(82, 20);
             this.metroLabel8.TabIndex = 16;
             this.metroLabel8.Text = "Cholesterol:";
             // 
@@ -978,7 +982,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(189, 183);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(68, 20);
             this.metroLabel7.TabIndex = 15;
             this.metroLabel7.Text = "Uric Acid:";
             // 
@@ -987,7 +991,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(183, 164);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(75, 20);
             this.metroLabel6.TabIndex = 14;
             this.metroLabel6.Text = "Creatinine:";
             // 
@@ -996,7 +1000,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(175, 145);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(83, 20);
             this.metroLabel5.TabIndex = 13;
             this.metroLabel5.Text = "Urea (BUN):";
             // 
@@ -1005,7 +1009,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(207, 126);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(49, 20);
             this.metroLabel4.TabIndex = 12;
             this.metroLabel4.Text = "HBa1c:";
             // 
@@ -1014,7 +1018,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(42, 107);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(212, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(219, 20);
             this.metroLabel3.TabIndex = 11;
             this.metroLabel3.Text = "2 Hours Post Prandial Bood Sugar:";
             // 
@@ -1023,7 +1027,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(114, 88);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(140, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(142, 20);
             this.metroLabel2.TabIndex = 10;
             this.metroLabel2.Text = "Random Blood Sugar:";
             // 
@@ -1032,7 +1036,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(124, 69);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(133, 20);
             this.metroLabel1.TabIndex = 9;
             this.metroLabel1.Text = "Fasting Blood Sugar:";
             // 
@@ -1042,7 +1046,7 @@
             this.lblChemPathologist.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemPathologist.Location = new System.Drawing.Point(260, 245);
             this.lblChemPathologist.Name = "lblChemPathologist";
-            this.lblChemPathologist.Size = new System.Drawing.Size(21, 19);
+            this.lblChemPathologist.Size = new System.Drawing.Size(21, 20);
             this.lblChemPathologist.TabIndex = 8;
             this.lblChemPathologist.Text = "--";
             // 
@@ -1052,7 +1056,7 @@
             this.lblChemMedTech.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblChemMedTech.Location = new System.Drawing.Point(260, 264);
             this.lblChemMedTech.Name = "lblChemMedTech";
-            this.lblChemMedTech.Size = new System.Drawing.Size(21, 19);
+            this.lblChemMedTech.Size = new System.Drawing.Size(21, 20);
             this.lblChemMedTech.TabIndex = 7;
             this.lblChemMedTech.Text = "--";
             // 
@@ -1086,7 +1090,7 @@
             this.gridTrans.EnableHeadersVisualStyles = false;
             this.gridTrans.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridTrans.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridTrans.Location = new System.Drawing.Point(527, 119);
+            this.gridTrans.Location = new System.Drawing.Point(544, 119);
             this.gridTrans.MultiSelect = false;
             this.gridTrans.Name = "gridTrans";
             this.gridTrans.ReadOnly = true;
@@ -1099,9 +1103,10 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridTrans.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.gridTrans.RowHeadersWidth = 51;
             this.gridTrans.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridTrans.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTrans.Size = new System.Drawing.Size(205, 513);
+            this.gridTrans.Size = new System.Drawing.Size(188, 513);
             this.gridTrans.TabIndex = 16;
             this.gridTrans.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTrans_CellClick);
             this.gridTrans.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridTrans_KeyDown);
@@ -1193,7 +1198,7 @@
             this.lblParaResult.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaResult.Location = new System.Drawing.Point(165, 174);
             this.lblParaResult.Name = "lblParaResult";
-            this.lblParaResult.Size = new System.Drawing.Size(21, 19);
+            this.lblParaResult.Size = new System.Drawing.Size(21, 20);
             this.lblParaResult.TabIndex = 69;
             this.lblParaResult.Text = "--";
             // 
@@ -1202,7 +1207,7 @@
             this.metroLabel59.AutoSize = true;
             this.metroLabel59.Location = new System.Drawing.Point(113, 174);
             this.metroLabel59.Name = "metroLabel59";
-            this.metroLabel59.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel59.Size = new System.Drawing.Size(49, 20);
             this.metroLabel59.TabIndex = 68;
             this.metroLabel59.Text = "Result:";
             // 
@@ -1212,7 +1217,7 @@
             this.lblParaBacteria.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaBacteria.Location = new System.Drawing.Point(500, 116);
             this.lblParaBacteria.Name = "lblParaBacteria";
-            this.lblParaBacteria.Size = new System.Drawing.Size(21, 19);
+            this.lblParaBacteria.Size = new System.Drawing.Size(21, 20);
             this.lblParaBacteria.TabIndex = 67;
             this.lblParaBacteria.Text = "--";
             // 
@@ -1221,7 +1226,7 @@
             this.metroLabel57.AutoSize = true;
             this.metroLabel57.Location = new System.Drawing.Point(435, 116);
             this.metroLabel57.Name = "metroLabel57";
-            this.metroLabel57.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel57.Size = new System.Drawing.Size(61, 20);
             this.metroLabel57.TabIndex = 66;
             this.metroLabel57.Text = "Bacteria:";
             // 
@@ -1231,7 +1236,7 @@
             this.lblParaFatGlobules.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaFatGlobules.Location = new System.Drawing.Point(500, 97);
             this.lblParaFatGlobules.Name = "lblParaFatGlobules";
-            this.lblParaFatGlobules.Size = new System.Drawing.Size(21, 19);
+            this.lblParaFatGlobules.Size = new System.Drawing.Size(21, 20);
             this.lblParaFatGlobules.TabIndex = 65;
             this.lblParaFatGlobules.Text = "--";
             // 
@@ -1240,7 +1245,7 @@
             this.metroLabel54.AutoSize = true;
             this.metroLabel54.Location = new System.Drawing.Point(412, 97);
             this.metroLabel54.Name = "metroLabel54";
-            this.metroLabel54.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel54.Size = new System.Drawing.Size(85, 20);
             this.metroLabel54.TabIndex = 64;
             this.metroLabel54.Text = "Fat globules:";
             // 
@@ -1250,7 +1255,7 @@
             this.lblParaRBC.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaRBC.Location = new System.Drawing.Point(500, 59);
             this.lblParaRBC.Name = "lblParaRBC";
-            this.lblParaRBC.Size = new System.Drawing.Size(21, 19);
+            this.lblParaRBC.Size = new System.Drawing.Size(21, 20);
             this.lblParaRBC.TabIndex = 63;
             this.lblParaRBC.Text = "--";
             // 
@@ -1259,7 +1264,7 @@
             this.metroLabel41.AutoSize = true;
             this.metroLabel41.Location = new System.Drawing.Point(457, 59);
             this.metroLabel41.Name = "metroLabel41";
-            this.metroLabel41.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel41.Size = new System.Drawing.Size(37, 20);
             this.metroLabel41.TabIndex = 62;
             this.metroLabel41.Text = "RBC:";
             // 
@@ -1269,7 +1274,7 @@
             this.lblParaPusCell.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaPusCell.Location = new System.Drawing.Point(500, 40);
             this.lblParaPusCell.Name = "lblParaPusCell";
-            this.lblParaPusCell.Size = new System.Drawing.Size(21, 19);
+            this.lblParaPusCell.Size = new System.Drawing.Size(21, 20);
             this.lblParaPusCell.TabIndex = 61;
             this.lblParaPusCell.Text = "--";
             // 
@@ -1278,7 +1283,7 @@
             this.metroLabel43.AutoSize = true;
             this.metroLabel43.Location = new System.Drawing.Point(439, 40);
             this.metroLabel43.Name = "metroLabel43";
-            this.metroLabel43.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel43.Size = new System.Drawing.Size(59, 20);
             this.metroLabel43.TabIndex = 60;
             this.metroLabel43.Text = "Pus cell:";
             // 
@@ -1288,7 +1293,7 @@
             this.lblParaEnHisTrop.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaEnHisTrop.Location = new System.Drawing.Point(361, 135);
             this.lblParaEnHisTrop.Name = "lblParaEnHisTrop";
-            this.lblParaEnHisTrop.Size = new System.Drawing.Size(21, 19);
+            this.lblParaEnHisTrop.Size = new System.Drawing.Size(21, 20);
             this.lblParaEnHisTrop.TabIndex = 59;
             this.lblParaEnHisTrop.Text = "--";
             // 
@@ -1297,7 +1302,7 @@
             this.metroLabel45.AutoSize = true;
             this.metroLabel45.Location = new System.Drawing.Point(275, 135);
             this.metroLabel45.Name = "metroLabel45";
-            this.metroLabel45.Size = new System.Drawing.Size(80, 19);
+            this.metroLabel45.Size = new System.Drawing.Size(83, 20);
             this.metroLabel45.TabIndex = 58;
             this.metroLabel45.Text = "trophozoite:";
             // 
@@ -1307,7 +1312,7 @@
             this.lblParaEnHisCyst.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaEnHisCyst.Location = new System.Drawing.Point(361, 116);
             this.lblParaEnHisCyst.Name = "lblParaEnHisCyst";
-            this.lblParaEnHisCyst.Size = new System.Drawing.Size(21, 19);
+            this.lblParaEnHisCyst.Size = new System.Drawing.Size(21, 20);
             this.lblParaEnHisCyst.TabIndex = 57;
             this.lblParaEnHisCyst.Text = "--";
             // 
@@ -1316,7 +1321,7 @@
             this.metroLabel47.AutoSize = true;
             this.metroLabel47.Location = new System.Drawing.Point(322, 116);
             this.metroLabel47.Name = "metroLabel47";
-            this.metroLabel47.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel47.Size = new System.Drawing.Size(36, 20);
             this.metroLabel47.TabIndex = 56;
             this.metroLabel47.Text = "cyst:";
             // 
@@ -1325,7 +1330,7 @@
             this.metroLabel49.AutoSize = true;
             this.metroLabel49.Location = new System.Drawing.Point(216, 97);
             this.metroLabel49.Name = "metroLabel49";
-            this.metroLabel49.Size = new System.Drawing.Size(139, 19);
+            this.metroLabel49.Size = new System.Drawing.Size(146, 20);
             this.metroLabel49.TabIndex = 54;
             this.metroLabel49.Text = "Entamoeba histolytica:";
             // 
@@ -1335,7 +1340,7 @@
             this.lblParaEnColiTrop.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaEnColiTrop.Location = new System.Drawing.Point(361, 78);
             this.lblParaEnColiTrop.Name = "lblParaEnColiTrop";
-            this.lblParaEnColiTrop.Size = new System.Drawing.Size(21, 19);
+            this.lblParaEnColiTrop.Size = new System.Drawing.Size(21, 20);
             this.lblParaEnColiTrop.TabIndex = 53;
             this.lblParaEnColiTrop.Text = "--";
             // 
@@ -1344,7 +1349,7 @@
             this.metroLabel51.AutoSize = true;
             this.metroLabel51.Location = new System.Drawing.Point(275, 78);
             this.metroLabel51.Name = "metroLabel51";
-            this.metroLabel51.Size = new System.Drawing.Size(80, 19);
+            this.metroLabel51.Size = new System.Drawing.Size(83, 20);
             this.metroLabel51.TabIndex = 52;
             this.metroLabel51.Text = "trophozoite:";
             // 
@@ -1354,7 +1359,7 @@
             this.lblParaEnColiCyst.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaEnColiCyst.Location = new System.Drawing.Point(361, 59);
             this.lblParaEnColiCyst.Name = "lblParaEnColiCyst";
-            this.lblParaEnColiCyst.Size = new System.Drawing.Size(21, 19);
+            this.lblParaEnColiCyst.Size = new System.Drawing.Size(21, 20);
             this.lblParaEnColiCyst.TabIndex = 51;
             this.lblParaEnColiCyst.Text = "--";
             // 
@@ -1363,7 +1368,7 @@
             this.metroLabel53.AutoSize = true;
             this.metroLabel53.Location = new System.Drawing.Point(322, 59);
             this.metroLabel53.Name = "metroLabel53";
-            this.metroLabel53.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel53.Size = new System.Drawing.Size(36, 20);
             this.metroLabel53.TabIndex = 50;
             this.metroLabel53.Text = "cyst:";
             // 
@@ -1372,7 +1377,7 @@
             this.metroLabel55.AutoSize = true;
             this.metroLabel55.Location = new System.Drawing.Point(252, 40);
             this.metroLabel55.Name = "metroLabel55";
-            this.metroLabel55.Size = new System.Drawing.Size(103, 19);
+            this.metroLabel55.Size = new System.Drawing.Size(107, 20);
             this.metroLabel55.TabIndex = 48;
             this.metroLabel55.Text = "Entamoeba coli:";
             // 
@@ -1382,7 +1387,7 @@
             this.lblParaYeastCell.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaYeastCell.Location = new System.Drawing.Point(500, 78);
             this.lblParaYeastCell.Name = "lblParaYeastCell";
-            this.lblParaYeastCell.Size = new System.Drawing.Size(21, 19);
+            this.lblParaYeastCell.Size = new System.Drawing.Size(21, 20);
             this.lblParaYeastCell.TabIndex = 47;
             this.lblParaYeastCell.Text = "--";
             // 
@@ -1391,7 +1396,7 @@
             this.metroLabel37.AutoSize = true;
             this.metroLabel37.Location = new System.Drawing.Point(430, 78);
             this.metroLabel37.Name = "metroLabel37";
-            this.metroLabel37.Size = new System.Drawing.Size(64, 19);
+            this.metroLabel37.Size = new System.Drawing.Size(68, 20);
             this.metroLabel37.TabIndex = 46;
             this.metroLabel37.Text = "Yeast cell:";
             // 
@@ -1401,7 +1406,7 @@
             this.lblParaOthers.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaOthers.Location = new System.Drawing.Point(165, 193);
             this.lblParaOthers.Name = "lblParaOthers";
-            this.lblParaOthers.Size = new System.Drawing.Size(21, 19);
+            this.lblParaOthers.Size = new System.Drawing.Size(21, 20);
             this.lblParaOthers.TabIndex = 45;
             this.lblParaOthers.Text = "--";
             // 
@@ -1410,7 +1415,7 @@
             this.metroLabel39.AutoSize = true;
             this.metroLabel39.Location = new System.Drawing.Point(108, 193);
             this.metroLabel39.Name = "metroLabel39";
-            this.metroLabel39.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel39.Size = new System.Drawing.Size(54, 20);
             this.metroLabel39.TabIndex = 44;
             this.metroLabel39.Text = "Others:";
             // 
@@ -1420,7 +1425,7 @@
             this.lblParaStrongyloides.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaStrongyloides.Location = new System.Drawing.Point(165, 135);
             this.lblParaStrongyloides.Name = "lblParaStrongyloides";
-            this.lblParaStrongyloides.Size = new System.Drawing.Size(21, 19);
+            this.lblParaStrongyloides.Size = new System.Drawing.Size(21, 20);
             this.lblParaStrongyloides.TabIndex = 43;
             this.lblParaStrongyloides.Text = "--";
             // 
@@ -1429,7 +1434,7 @@
             this.metroLabel31.AutoSize = true;
             this.metroLabel31.Location = new System.Drawing.Point(6, 135);
             this.metroLabel31.Name = "metroLabel31";
-            this.metroLabel31.Size = new System.Drawing.Size(153, 19);
+            this.metroLabel31.Size = new System.Drawing.Size(161, 20);
             this.metroLabel31.TabIndex = 42;
             this.metroLabel31.Text = "Strongyloides stercoralis:";
             // 
@@ -1439,7 +1444,7 @@
             this.lblParaTrichuris.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaTrichuris.Location = new System.Drawing.Point(165, 116);
             this.lblParaTrichuris.Name = "lblParaTrichuris";
-            this.lblParaTrichuris.Size = new System.Drawing.Size(21, 19);
+            this.lblParaTrichuris.Size = new System.Drawing.Size(21, 20);
             this.lblParaTrichuris.TabIndex = 41;
             this.lblParaTrichuris.Text = "--";
             // 
@@ -1448,7 +1453,7 @@
             this.metroLabel33.AutoSize = true;
             this.metroLabel33.Location = new System.Drawing.Point(50, 116);
             this.metroLabel33.Name = "metroLabel33";
-            this.metroLabel33.Size = new System.Drawing.Size(109, 19);
+            this.metroLabel33.Size = new System.Drawing.Size(117, 20);
             this.metroLabel33.TabIndex = 40;
             this.metroLabel33.Text = "Trichuris trichiura:";
             // 
@@ -1458,7 +1463,7 @@
             this.lblParaHookworm.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaHookworm.Location = new System.Drawing.Point(165, 97);
             this.lblParaHookworm.Name = "lblParaHookworm";
-            this.lblParaHookworm.Size = new System.Drawing.Size(21, 19);
+            this.lblParaHookworm.Size = new System.Drawing.Size(21, 20);
             this.lblParaHookworm.TabIndex = 39;
             this.lblParaHookworm.Text = "--";
             // 
@@ -1467,7 +1472,7 @@
             this.metroLabel35.AutoSize = true;
             this.metroLabel35.Location = new System.Drawing.Point(82, 97);
             this.metroLabel35.Name = "metroLabel35";
-            this.metroLabel35.Size = new System.Drawing.Size(77, 19);
+            this.metroLabel35.Size = new System.Drawing.Size(80, 20);
             this.metroLabel35.TabIndex = 38;
             this.metroLabel35.Text = "Hookworm:";
             // 
@@ -1476,7 +1481,7 @@
             this.metroLabel26.AutoSize = true;
             this.metroLabel26.Location = new System.Drawing.Point(26, 245);
             this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(133, 19);
+            this.metroLabel26.Size = new System.Drawing.Size(141, 20);
             this.metroLabel26.TabIndex = 37;
             this.metroLabel26.Text = "Medical Technologist:";
             // 
@@ -1485,7 +1490,7 @@
             this.metroLabel27.AutoSize = true;
             this.metroLabel27.Location = new System.Drawing.Point(83, 226);
             this.metroLabel27.Name = "metroLabel27";
-            this.metroLabel27.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel27.Size = new System.Drawing.Size(78, 20);
             this.metroLabel27.TabIndex = 36;
             this.metroLabel27.Text = "Pathologist:";
             // 
@@ -1495,7 +1500,7 @@
             this.lblParaPathologist.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaPathologist.Location = new System.Drawing.Point(165, 226);
             this.lblParaPathologist.Name = "lblParaPathologist";
-            this.lblParaPathologist.Size = new System.Drawing.Size(21, 19);
+            this.lblParaPathologist.Size = new System.Drawing.Size(21, 20);
             this.lblParaPathologist.TabIndex = 35;
             this.lblParaPathologist.Text = "--";
             // 
@@ -1505,7 +1510,7 @@
             this.lblParaMedTech.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaMedTech.Location = new System.Drawing.Point(165, 245);
             this.lblParaMedTech.Name = "lblParaMedTech";
-            this.lblParaMedTech.Size = new System.Drawing.Size(21, 19);
+            this.lblParaMedTech.Size = new System.Drawing.Size(21, 20);
             this.lblParaMedTech.TabIndex = 34;
             this.lblParaMedTech.Text = "--";
             // 
@@ -1515,7 +1520,7 @@
             this.lblParaAscaris.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaAscaris.Location = new System.Drawing.Point(165, 78);
             this.lblParaAscaris.Name = "lblParaAscaris";
-            this.lblParaAscaris.Size = new System.Drawing.Size(21, 19);
+            this.lblParaAscaris.Size = new System.Drawing.Size(21, 20);
             this.lblParaAscaris.TabIndex = 33;
             this.lblParaAscaris.Text = "--";
             // 
@@ -1524,7 +1529,7 @@
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.Location = new System.Drawing.Point(28, 78);
             this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(131, 19);
+            this.metroLabel25.Size = new System.Drawing.Size(138, 20);
             this.metroLabel25.TabIndex = 32;
             this.metroLabel25.Text = "Ascaris lumbricoides:";
             // 
@@ -1534,7 +1539,7 @@
             this.lblParaConsistency.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaConsistency.Location = new System.Drawing.Point(165, 59);
             this.lblParaConsistency.Name = "lblParaConsistency";
-            this.lblParaConsistency.Size = new System.Drawing.Size(21, 19);
+            this.lblParaConsistency.Size = new System.Drawing.Size(21, 20);
             this.lblParaConsistency.TabIndex = 31;
             this.lblParaConsistency.Text = "--";
             // 
@@ -1543,7 +1548,7 @@
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.Location = new System.Drawing.Point(80, 59);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel23.Size = new System.Drawing.Size(86, 20);
             this.metroLabel23.TabIndex = 30;
             this.metroLabel23.Text = "Consistency:";
             // 
@@ -1553,7 +1558,7 @@
             this.lblParaColor.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblParaColor.Location = new System.Drawing.Point(165, 40);
             this.lblParaColor.Name = "lblParaColor";
-            this.lblParaColor.Size = new System.Drawing.Size(21, 19);
+            this.lblParaColor.Size = new System.Drawing.Size(21, 20);
             this.lblParaColor.TabIndex = 29;
             this.lblParaColor.Text = "--";
             // 
@@ -1562,7 +1567,7 @@
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Location = new System.Drawing.Point(113, 40);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel21.Size = new System.Drawing.Size(46, 20);
             this.metroLabel21.TabIndex = 28;
             this.metroLabel21.Text = "Color:";
             // 
@@ -1625,13 +1630,28 @@
             this.grpUrinalysis.TabStop = false;
             this.grpUrinalysis.Text = "Urinalysis";
             // 
+            // btnUriUpdate
+            // 
+            this.btnUriUpdate.BackColor = System.Drawing.Color.Green;
+            this.btnUriUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUriUpdate.Location = new System.Drawing.Point(474, 267);
+            this.btnUriUpdate.Name = "btnUriUpdate";
+            this.btnUriUpdate.Size = new System.Drawing.Size(109, 50);
+            this.btnUriUpdate.TabIndex = 73;
+            this.btnUriUpdate.Text = "UPDATE";
+            this.btnUriUpdate.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnUriUpdate.UseCustomBackColor = true;
+            this.btnUriUpdate.UseCustomForeColor = true;
+            this.btnUriUpdate.UseSelectable = true;
+            this.btnUriUpdate.Click += new System.EventHandler(this.btnUriUpdate_Click);
+            // 
             // metroLabel93
             // 
             this.metroLabel93.AutoSize = true;
             this.metroLabel93.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel93.Location = new System.Drawing.Point(110, 155);
             this.metroLabel93.Name = "metroLabel93";
-            this.metroLabel93.Size = new System.Drawing.Size(52, 19);
+            this.metroLabel93.Size = new System.Drawing.Size(54, 20);
             this.metroLabel93.TabIndex = 78;
             this.metroLabel93.Text = "CASTS";
             // 
@@ -1641,7 +1661,7 @@
             this.lblUriTriHominis.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriTriHominis.Location = new System.Drawing.Point(448, 231);
             this.lblUriTriHominis.Name = "lblUriTriHominis";
-            this.lblUriTriHominis.Size = new System.Drawing.Size(21, 19);
+            this.lblUriTriHominis.Size = new System.Drawing.Size(21, 20);
             this.lblUriTriHominis.TabIndex = 77;
             this.lblUriTriHominis.Text = "--";
             // 
@@ -1650,7 +1670,7 @@
             this.metroLabel88.AutoSize = true;
             this.metroLabel88.Location = new System.Drawing.Point(306, 231);
             this.metroLabel88.Name = "metroLabel88";
-            this.metroLabel88.Size = new System.Drawing.Size(136, 19);
+            this.metroLabel88.Size = new System.Drawing.Size(144, 20);
             this.metroLabel88.TabIndex = 76;
             this.metroLabel88.Text = "Trichomonas Hominis:";
             // 
@@ -1660,7 +1680,7 @@
             this.lblUriTriVaginalis.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriTriVaginalis.Location = new System.Drawing.Point(448, 212);
             this.lblUriTriVaginalis.Name = "lblUriTriVaginalis";
-            this.lblUriTriVaginalis.Size = new System.Drawing.Size(21, 19);
+            this.lblUriTriVaginalis.Size = new System.Drawing.Size(21, 20);
             this.lblUriTriVaginalis.TabIndex = 75;
             this.lblUriTriVaginalis.Text = "--";
             // 
@@ -1669,7 +1689,7 @@
             this.metroLabel90.AutoSize = true;
             this.metroLabel90.Location = new System.Drawing.Point(303, 212);
             this.metroLabel90.Name = "metroLabel90";
-            this.metroLabel90.Size = new System.Drawing.Size(139, 19);
+            this.metroLabel90.Size = new System.Drawing.Size(146, 20);
             this.metroLabel90.TabIndex = 74;
             this.metroLabel90.Text = "Trichomorias Vaginalis:";
             // 
@@ -1679,7 +1699,7 @@
             this.lblUriYeastCells.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriYeastCells.Location = new System.Drawing.Point(448, 193);
             this.lblUriYeastCells.Name = "lblUriYeastCells";
-            this.lblUriYeastCells.Size = new System.Drawing.Size(21, 19);
+            this.lblUriYeastCells.Size = new System.Drawing.Size(21, 20);
             this.lblUriYeastCells.TabIndex = 73;
             this.lblUriYeastCells.Text = "--";
             // 
@@ -1688,7 +1708,7 @@
             this.metroLabel92.AutoSize = true;
             this.metroLabel92.Location = new System.Drawing.Point(370, 193);
             this.metroLabel92.Name = "metroLabel92";
-            this.metroLabel92.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel92.Size = new System.Drawing.Size(76, 20);
             this.metroLabel92.TabIndex = 72;
             this.metroLabel92.Text = "Yeast Cells:";
             // 
@@ -1698,7 +1718,7 @@
             this.lblUriAmorphous.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriAmorphous.Location = new System.Drawing.Point(448, 79);
             this.lblUriAmorphous.Name = "lblUriAmorphous";
-            this.lblUriAmorphous.Size = new System.Drawing.Size(21, 19);
+            this.lblUriAmorphous.Size = new System.Drawing.Size(21, 20);
             this.lblUriAmorphous.TabIndex = 71;
             this.lblUriAmorphous.Text = "--";
             // 
@@ -1723,7 +1743,7 @@
             this.lblUriFineGran.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriFineGran.Location = new System.Drawing.Point(168, 174);
             this.lblUriFineGran.Name = "lblUriFineGran";
-            this.lblUriFineGran.Size = new System.Drawing.Size(21, 19);
+            this.lblUriFineGran.Size = new System.Drawing.Size(21, 20);
             this.lblUriFineGran.TabIndex = 69;
             this.lblUriFineGran.Text = "--";
             // 
@@ -1732,7 +1752,7 @@
             this.metroLabel29.AutoSize = true;
             this.metroLabel29.Location = new System.Drawing.Point(43, 174);
             this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(119, 19);
+            this.metroLabel29.Size = new System.Drawing.Size(125, 20);
             this.metroLabel29.TabIndex = 68;
             this.metroLabel29.Text = "Fine Granular Cast:";
             // 
@@ -1742,7 +1762,7 @@
             this.lblUriRoundEpi.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriRoundEpi.Location = new System.Drawing.Point(448, 174);
             this.lblUriRoundEpi.Name = "lblUriRoundEpi";
-            this.lblUriRoundEpi.Size = new System.Drawing.Size(21, 19);
+            this.lblUriRoundEpi.Size = new System.Drawing.Size(21, 20);
             this.lblUriRoundEpi.TabIndex = 67;
             this.lblUriRoundEpi.Text = "--";
             // 
@@ -1751,7 +1771,7 @@
             this.metroLabel36.AutoSize = true;
             this.metroLabel36.Location = new System.Drawing.Point(308, 174);
             this.metroLabel36.Name = "metroLabel36";
-            this.metroLabel36.Size = new System.Drawing.Size(137, 19);
+            this.metroLabel36.Size = new System.Drawing.Size(144, 20);
             this.metroLabel36.TabIndex = 66;
             this.metroLabel36.Text = "Round Epithelial Cells:";
             // 
@@ -1761,7 +1781,7 @@
             this.lblUriMucous.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriMucous.Location = new System.Drawing.Point(448, 155);
             this.lblUriMucous.Name = "lblUriMucous";
-            this.lblUriMucous.Size = new System.Drawing.Size(21, 19);
+            this.lblUriMucous.Size = new System.Drawing.Size(21, 20);
             this.lblUriMucous.TabIndex = 65;
             this.lblUriMucous.Text = "--";
             // 
@@ -1770,7 +1790,7 @@
             this.metroLabel40.AutoSize = true;
             this.metroLabel40.Location = new System.Drawing.Point(338, 155);
             this.metroLabel40.Name = "metroLabel40";
-            this.metroLabel40.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel40.Size = new System.Drawing.Size(111, 20);
             this.metroLabel40.TabIndex = 64;
             this.metroLabel40.Text = "Mucous threads:";
             // 
@@ -1780,7 +1800,7 @@
             this.lblUriRBC.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriRBC.Location = new System.Drawing.Point(168, 264);
             this.lblUriRBC.Name = "lblUriRBC";
-            this.lblUriRBC.Size = new System.Drawing.Size(21, 19);
+            this.lblUriRBC.Size = new System.Drawing.Size(21, 20);
             this.lblUriRBC.TabIndex = 63;
             this.lblUriRBC.Text = "--";
             // 
@@ -1789,7 +1809,7 @@
             this.metroLabel44.AutoSize = true;
             this.metroLabel44.Location = new System.Drawing.Point(125, 264);
             this.metroLabel44.Name = "metroLabel44";
-            this.metroLabel44.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel44.Size = new System.Drawing.Size(37, 20);
             this.metroLabel44.TabIndex = 62;
             this.metroLabel44.Text = "RBC:";
             // 
@@ -1799,7 +1819,7 @@
             this.lblUriPusCells.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriPusCells.Location = new System.Drawing.Point(168, 283);
             this.lblUriPusCells.Name = "lblUriPusCells";
-            this.lblUriPusCells.Size = new System.Drawing.Size(21, 19);
+            this.lblUriPusCells.Size = new System.Drawing.Size(21, 20);
             this.lblUriPusCells.TabIndex = 61;
             this.lblUriPusCells.Text = "--";
             // 
@@ -1808,7 +1828,7 @@
             this.metroLabel48.AutoSize = true;
             this.metroLabel48.Location = new System.Drawing.Point(107, 283);
             this.metroLabel48.Name = "metroLabel48";
-            this.metroLabel48.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel48.Size = new System.Drawing.Size(59, 20);
             this.metroLabel48.TabIndex = 60;
             this.metroLabel48.Text = "Pus cell:";
             // 
@@ -1818,7 +1838,7 @@
             this.lblUriSquamous.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriSquamous.Location = new System.Drawing.Point(448, 117);
             this.lblUriSquamous.Name = "lblUriSquamous";
-            this.lblUriSquamous.Size = new System.Drawing.Size(21, 19);
+            this.lblUriSquamous.Size = new System.Drawing.Size(21, 20);
             this.lblUriSquamous.TabIndex = 59;
             this.lblUriSquamous.Text = "--";
             // 
@@ -1827,7 +1847,7 @@
             this.metroLabel52.AutoSize = true;
             this.metroLabel52.Location = new System.Drawing.Point(282, 117);
             this.metroLabel52.Name = "metroLabel52";
-            this.metroLabel52.Size = new System.Drawing.Size(160, 19);
+            this.metroLabel52.Size = new System.Drawing.Size(168, 20);
             this.metroLabel52.TabIndex = 58;
             this.metroLabel52.Text = "Squamous Epithelial Cells:";
             // 
@@ -1837,7 +1857,7 @@
             this.lblUriTripPhosphates.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriTripPhosphates.Location = new System.Drawing.Point(448, 98);
             this.lblUriTripPhosphates.Name = "lblUriTripPhosphates";
-            this.lblUriTripPhosphates.Size = new System.Drawing.Size(21, 19);
+            this.lblUriTripPhosphates.Size = new System.Drawing.Size(21, 20);
             this.lblUriTripPhosphates.TabIndex = 57;
             this.lblUriTripPhosphates.Text = "--";
             // 
@@ -1846,7 +1866,7 @@
             this.metroLabel58.AutoSize = true;
             this.metroLabel58.Location = new System.Drawing.Point(329, 98);
             this.metroLabel58.Name = "metroLabel58";
-            this.metroLabel58.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel58.Size = new System.Drawing.Size(120, 20);
             this.metroLabel58.TabIndex = 56;
             this.metroLabel58.Text = "Triple Phosphates:";
             // 
@@ -1855,7 +1875,7 @@
             this.metroLabel60.AutoSize = true;
             this.metroLabel60.Location = new System.Drawing.Point(320, 79);
             this.metroLabel60.Name = "metroLabel60";
-            this.metroLabel60.Size = new System.Drawing.Size(122, 19);
+            this.metroLabel60.Size = new System.Drawing.Size(128, 20);
             this.metroLabel60.TabIndex = 54;
             this.metroLabel60.Text = "Amorphous Urates:";
             // 
@@ -1865,7 +1885,7 @@
             this.lblUriCalciumOxalate.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriCalciumOxalate.Location = new System.Drawing.Point(448, 60);
             this.lblUriCalciumOxalate.Name = "lblUriCalciumOxalate";
-            this.lblUriCalciumOxalate.Size = new System.Drawing.Size(21, 19);
+            this.lblUriCalciumOxalate.Size = new System.Drawing.Size(21, 20);
             this.lblUriCalciumOxalate.TabIndex = 53;
             this.lblUriCalciumOxalate.Text = "--";
             // 
@@ -1874,7 +1894,7 @@
             this.metroLabel62.AutoSize = true;
             this.metroLabel62.Location = new System.Drawing.Point(334, 60);
             this.metroLabel62.Name = "metroLabel62";
-            this.metroLabel62.Size = new System.Drawing.Size(108, 19);
+            this.metroLabel62.Size = new System.Drawing.Size(111, 20);
             this.metroLabel62.TabIndex = 52;
             this.metroLabel62.Text = "Calcium Oxalate:";
             // 
@@ -1884,7 +1904,7 @@
             this.lblUriUricAcid.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriUricAcid.Location = new System.Drawing.Point(448, 41);
             this.lblUriUricAcid.Name = "lblUriUricAcid";
-            this.lblUriUricAcid.Size = new System.Drawing.Size(21, 19);
+            this.lblUriUricAcid.Size = new System.Drawing.Size(21, 20);
             this.lblUriUricAcid.TabIndex = 51;
             this.lblUriUricAcid.Text = "--";
             // 
@@ -1893,7 +1913,7 @@
             this.metroLabel64.AutoSize = true;
             this.metroLabel64.Location = new System.Drawing.Point(377, 41);
             this.metroLabel64.Name = "metroLabel64";
-            this.metroLabel64.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel64.Size = new System.Drawing.Size(68, 20);
             this.metroLabel64.TabIndex = 50;
             this.metroLabel64.Text = "Uric Acid:";
             // 
@@ -1903,7 +1923,7 @@
             this.metroLabel65.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel65.Location = new System.Drawing.Point(366, 22);
             this.metroLabel65.Name = "metroLabel65";
-            this.metroLabel65.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel65.Size = new System.Drawing.Size(80, 20);
             this.metroLabel65.TabIndex = 48;
             this.metroLabel65.Text = "CRYSTALS";
             // 
@@ -1913,7 +1933,7 @@
             this.lblUriBacteria.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriBacteria.Location = new System.Drawing.Point(448, 136);
             this.lblUriBacteria.Name = "lblUriBacteria";
-            this.lblUriBacteria.Size = new System.Drawing.Size(21, 19);
+            this.lblUriBacteria.Size = new System.Drawing.Size(21, 20);
             this.lblUriBacteria.TabIndex = 47;
             this.lblUriBacteria.Text = "--";
             // 
@@ -1922,7 +1942,7 @@
             this.metroLabel67.AutoSize = true;
             this.metroLabel67.Location = new System.Drawing.Point(383, 136);
             this.metroLabel67.Name = "metroLabel67";
-            this.metroLabel67.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel67.Size = new System.Drawing.Size(61, 20);
             this.metroLabel67.TabIndex = 46;
             this.metroLabel67.Text = "Bacteria:";
             // 
@@ -1932,7 +1952,7 @@
             this.lblUriCoarseGran.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriCoarseGran.Location = new System.Drawing.Point(168, 193);
             this.lblUriCoarseGran.Name = "lblUriCoarseGran";
-            this.lblUriCoarseGran.Size = new System.Drawing.Size(21, 19);
+            this.lblUriCoarseGran.Size = new System.Drawing.Size(21, 20);
             this.lblUriCoarseGran.TabIndex = 45;
             this.lblUriCoarseGran.Text = "--";
             // 
@@ -1941,7 +1961,7 @@
             this.metroLabel69.AutoSize = true;
             this.metroLabel69.Location = new System.Drawing.Point(26, 193);
             this.metroLabel69.Name = "metroLabel69";
-            this.metroLabel69.Size = new System.Drawing.Size(136, 19);
+            this.metroLabel69.Size = new System.Drawing.Size(142, 20);
             this.metroLabel69.TabIndex = 44;
             this.metroLabel69.Text = "Coarse Granular Cast:";
             // 
@@ -1951,7 +1971,7 @@
             this.lblUriSugar.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriSugar.Location = new System.Drawing.Point(168, 117);
             this.lblUriSugar.Name = "lblUriSugar";
-            this.lblUriSugar.Size = new System.Drawing.Size(21, 19);
+            this.lblUriSugar.Size = new System.Drawing.Size(21, 20);
             this.lblUriSugar.TabIndex = 43;
             this.lblUriSugar.Text = "--";
             // 
@@ -1960,7 +1980,7 @@
             this.metroLabel71.AutoSize = true;
             this.metroLabel71.Location = new System.Drawing.Point(115, 117);
             this.metroLabel71.Name = "metroLabel71";
-            this.metroLabel71.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel71.Size = new System.Drawing.Size(48, 20);
             this.metroLabel71.TabIndex = 42;
             this.metroLabel71.Text = "Sugar:";
             // 
@@ -1970,7 +1990,7 @@
             this.lblUriProtein.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriProtein.Location = new System.Drawing.Point(168, 98);
             this.lblUriProtein.Name = "lblUriProtein";
-            this.lblUriProtein.Size = new System.Drawing.Size(21, 19);
+            this.lblUriProtein.Size = new System.Drawing.Size(21, 20);
             this.lblUriProtein.TabIndex = 41;
             this.lblUriProtein.Text = "--";
             // 
@@ -1979,7 +1999,7 @@
             this.metroLabel73.AutoSize = true;
             this.metroLabel73.Location = new System.Drawing.Point(108, 98);
             this.metroLabel73.Name = "metroLabel73";
-            this.metroLabel73.Size = new System.Drawing.Size(54, 19);
+            this.metroLabel73.Size = new System.Drawing.Size(56, 20);
             this.metroLabel73.TabIndex = 40;
             this.metroLabel73.Text = "Protein:";
             // 
@@ -1989,7 +2009,7 @@
             this.lblUriSpecificGravity.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriSpecificGravity.Location = new System.Drawing.Point(168, 79);
             this.lblUriSpecificGravity.Name = "lblUriSpecificGravity";
-            this.lblUriSpecificGravity.Size = new System.Drawing.Size(21, 19);
+            this.lblUriSpecificGravity.Size = new System.Drawing.Size(21, 20);
             this.lblUriSpecificGravity.TabIndex = 39;
             this.lblUriSpecificGravity.Text = "--";
             // 
@@ -1998,7 +2018,7 @@
             this.metroLabel75.AutoSize = true;
             this.metroLabel75.Location = new System.Drawing.Point(62, 79);
             this.metroLabel75.Name = "metroLabel75";
-            this.metroLabel75.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel75.Size = new System.Drawing.Size(106, 20);
             this.metroLabel75.TabIndex = 38;
             this.metroLabel75.Text = "Specific Gravity:";
             // 
@@ -2007,7 +2027,7 @@
             this.metroLabel76.AutoSize = true;
             this.metroLabel76.Location = new System.Drawing.Point(79, 231);
             this.metroLabel76.Name = "metroLabel76";
-            this.metroLabel76.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel76.Size = new System.Drawing.Size(88, 20);
             this.metroLabel76.TabIndex = 37;
             this.metroLabel76.Text = "Hyaline Cast:";
             // 
@@ -2016,7 +2036,7 @@
             this.metroLabel77.AutoSize = true;
             this.metroLabel77.Location = new System.Drawing.Point(75, 212);
             this.metroLabel77.Name = "metroLabel77";
-            this.metroLabel77.Size = new System.Drawing.Size(87, 19);
+            this.metroLabel77.Size = new System.Drawing.Size(91, 20);
             this.metroLabel77.TabIndex = 36;
             this.metroLabel77.Text = "Pus Cell Cast:";
             // 
@@ -2026,7 +2046,7 @@
             this.lblUriPusCell.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriPusCell.Location = new System.Drawing.Point(168, 212);
             this.lblUriPusCell.Name = "lblUriPusCell";
-            this.lblUriPusCell.Size = new System.Drawing.Size(21, 19);
+            this.lblUriPusCell.Size = new System.Drawing.Size(21, 20);
             this.lblUriPusCell.TabIndex = 35;
             this.lblUriPusCell.Text = "--";
             // 
@@ -2036,7 +2056,7 @@
             this.lblUriHyaline.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriHyaline.Location = new System.Drawing.Point(168, 231);
             this.lblUriHyaline.Name = "lblUriHyaline";
-            this.lblUriHyaline.Size = new System.Drawing.Size(21, 19);
+            this.lblUriHyaline.Size = new System.Drawing.Size(21, 20);
             this.lblUriHyaline.TabIndex = 34;
             this.lblUriHyaline.Text = "--";
             // 
@@ -2046,7 +2066,7 @@
             this.lblUriReaction.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriReaction.Location = new System.Drawing.Point(168, 60);
             this.lblUriReaction.Name = "lblUriReaction";
-            this.lblUriReaction.Size = new System.Drawing.Size(21, 19);
+            this.lblUriReaction.Size = new System.Drawing.Size(21, 20);
             this.lblUriReaction.TabIndex = 33;
             this.lblUriReaction.Text = "--";
             // 
@@ -2055,7 +2075,7 @@
             this.metroLabel81.AutoSize = true;
             this.metroLabel81.Location = new System.Drawing.Point(100, 60);
             this.metroLabel81.Name = "metroLabel81";
-            this.metroLabel81.Size = new System.Drawing.Size(62, 19);
+            this.metroLabel81.Size = new System.Drawing.Size(65, 20);
             this.metroLabel81.TabIndex = 32;
             this.metroLabel81.Text = "Reaction:";
             // 
@@ -2065,7 +2085,7 @@
             this.lblUriTrans.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriTrans.Location = new System.Drawing.Point(168, 41);
             this.lblUriTrans.Name = "lblUriTrans";
-            this.lblUriTrans.Size = new System.Drawing.Size(21, 19);
+            this.lblUriTrans.Size = new System.Drawing.Size(21, 20);
             this.lblUriTrans.TabIndex = 31;
             this.lblUriTrans.Text = "--";
             // 
@@ -2074,7 +2094,7 @@
             this.metroLabel83.AutoSize = true;
             this.metroLabel83.Location = new System.Drawing.Point(75, 41);
             this.metroLabel83.Name = "metroLabel83";
-            this.metroLabel83.Size = new System.Drawing.Size(87, 19);
+            this.metroLabel83.Size = new System.Drawing.Size(94, 20);
             this.metroLabel83.TabIndex = 30;
             this.metroLabel83.Text = "Transparency:";
             // 
@@ -2084,7 +2104,7 @@
             this.lblUriColor.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblUriColor.Location = new System.Drawing.Point(168, 22);
             this.lblUriColor.Name = "lblUriColor";
-            this.lblUriColor.Size = new System.Drawing.Size(21, 19);
+            this.lblUriColor.Size = new System.Drawing.Size(21, 20);
             this.lblUriColor.TabIndex = 29;
             this.lblUriColor.Text = "--";
             // 
@@ -2093,7 +2113,7 @@
             this.metroLabel85.AutoSize = true;
             this.metroLabel85.Location = new System.Drawing.Point(116, 22);
             this.metroLabel85.Name = "metroLabel85";
-            this.metroLabel85.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel85.Size = new System.Drawing.Size(46, 20);
             this.metroLabel85.TabIndex = 28;
             this.metroLabel85.Text = "Color:";
             // 
@@ -2180,7 +2200,7 @@
             this.lblHemaBloodType.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaBloodType.Location = new System.Drawing.Point(495, 126);
             this.lblHemaBloodType.Name = "lblHemaBloodType";
-            this.lblHemaBloodType.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaBloodType.Size = new System.Drawing.Size(21, 20);
             this.lblHemaBloodType.TabIndex = 102;
             this.lblHemaBloodType.Text = "--";
             // 
@@ -2190,7 +2210,7 @@
             this.lblHemaRH.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaRH.Location = new System.Drawing.Point(495, 145);
             this.lblHemaRH.Name = "lblHemaRH";
-            this.lblHemaRH.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaRH.Size = new System.Drawing.Size(21, 20);
             this.lblHemaRH.TabIndex = 101;
             this.lblHemaRH.Text = "--";
             // 
@@ -2199,7 +2219,7 @@
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.Location = new System.Drawing.Point(460, 145);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(29, 19);
+            this.metroLabel20.Size = new System.Drawing.Size(30, 20);
             this.metroLabel20.TabIndex = 100;
             this.metroLabel20.Text = "RH:";
             // 
@@ -2208,7 +2228,7 @@
             this.metroLabel56.AutoSize = true;
             this.metroLabel56.Location = new System.Drawing.Point(411, 126);
             this.metroLabel56.Name = "metroLabel56";
-            this.metroLabel56.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel56.Size = new System.Drawing.Size(81, 20);
             this.metroLabel56.TabIndex = 99;
             this.metroLabel56.Text = "Blood Type:";
             // 
@@ -2217,7 +2237,7 @@
             this.metroLabel117.AutoSize = true;
             this.metroLabel117.Location = new System.Drawing.Point(392, 352);
             this.metroLabel117.Name = "metroLabel117";
-            this.metroLabel117.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel117.Size = new System.Drawing.Size(84, 20);
             this.metroLabel117.TabIndex = 98;
             this.metroLabel117.Text = "2-6 minutes";
             // 
@@ -2226,7 +2246,7 @@
             this.metroLabel116.AutoSize = true;
             this.metroLabel116.Location = new System.Drawing.Point(392, 333);
             this.metroLabel116.Name = "metroLabel116";
-            this.metroLabel116.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel116.Size = new System.Drawing.Size(81, 20);
             this.metroLabel116.TabIndex = 97;
             this.metroLabel116.Text = "1-5 minutes";
             // 
@@ -2235,7 +2255,7 @@
             this.metroLabel115.AutoSize = true;
             this.metroLabel115.Location = new System.Drawing.Point(392, 314);
             this.metroLabel115.Name = "metroLabel115";
-            this.metroLabel115.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel115.Size = new System.Drawing.Size(47, 20);
             this.metroLabel115.TabIndex = 96;
             this.metroLabel115.Text = "X10⁹/L";
             // 
@@ -2244,7 +2264,7 @@
             this.metroLabel114.AutoSize = true;
             this.metroLabel114.Location = new System.Drawing.Point(392, 295);
             this.metroLabel114.Name = "metroLabel114";
-            this.metroLabel114.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel114.Size = new System.Drawing.Size(51, 20);
             this.metroLabel114.TabIndex = 95;
             this.metroLabel114.Text = "mm/hr";
             // 
@@ -2253,7 +2273,7 @@
             this.metroLabel113.AutoSize = true;
             this.metroLabel113.Location = new System.Drawing.Point(342, 240);
             this.metroLabel113.Name = "metroLabel113";
-            this.metroLabel113.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel113.Size = new System.Drawing.Size(69, 20);
             this.metroLabel113.TabIndex = 94;
             this.metroLabel113.Text = "0.04-0.08";
             // 
@@ -2262,7 +2282,7 @@
             this.metroLabel112.AutoSize = true;
             this.metroLabel112.Location = new System.Drawing.Point(342, 221);
             this.metroLabel112.Name = "metroLabel112";
-            this.metroLabel112.Size = new System.Drawing.Size(203, 19);
+            this.metroLabel112.Size = new System.Drawing.Size(217, 20);
             this.metroLabel112.TabIndex = 93;
             this.metroLabel112.Text = "Adult: 0.18-0.30 | Infant: 0.22-0.40";
             // 
@@ -2271,7 +2291,7 @@
             this.metroLabel111.AutoSize = true;
             this.metroLabel111.Location = new System.Drawing.Point(342, 202);
             this.metroLabel111.Name = "metroLabel111";
-            this.metroLabel111.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel111.Size = new System.Drawing.Size(66, 20);
             this.metroLabel111.TabIndex = 92;
             this.metroLabel111.Text = "0.00-0.01";
             // 
@@ -2280,7 +2300,7 @@
             this.metroLabel104.AutoSize = true;
             this.metroLabel104.Location = new System.Drawing.Point(342, 183);
             this.metroLabel104.Name = "metroLabel104";
-            this.metroLabel104.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel104.Size = new System.Drawing.Size(69, 20);
             this.metroLabel104.TabIndex = 91;
             this.metroLabel104.Text = "0.02-0.03";
             // 
@@ -2289,7 +2309,7 @@
             this.metroLabel103.AutoSize = true;
             this.metroLabel103.Location = new System.Drawing.Point(342, 164);
             this.metroLabel103.Name = "metroLabel103";
-            this.metroLabel103.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel103.Size = new System.Drawing.Size(69, 20);
             this.metroLabel103.TabIndex = 90;
             this.metroLabel103.Text = "0.02-0.06";
             // 
@@ -2298,7 +2318,7 @@
             this.metroLabel102.AutoSize = true;
             this.metroLabel102.Location = new System.Drawing.Point(342, 145);
             this.metroLabel102.Name = "metroLabel102";
-            this.metroLabel102.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel102.Size = new System.Drawing.Size(68, 20);
             this.metroLabel102.TabIndex = 89;
             this.metroLabel102.Text = "0.60-0.70";
             // 
@@ -2307,7 +2327,7 @@
             this.metroLabel101.AutoSize = true;
             this.metroLabel101.Location = new System.Drawing.Point(342, 126);
             this.metroLabel101.Name = "metroLabel101";
-            this.metroLabel101.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel101.Size = new System.Drawing.Size(68, 20);
             this.metroLabel101.TabIndex = 88;
             this.metroLabel101.Text = "0.60-0.70";
             // 
@@ -2316,7 +2336,7 @@
             this.metroLabel84.AutoSize = true;
             this.metroLabel84.Location = new System.Drawing.Point(342, 88);
             this.metroLabel84.Name = "metroLabel84";
-            this.metroLabel84.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel84.Size = new System.Drawing.Size(89, 20);
             this.metroLabel84.TabIndex = 87;
             this.metroLabel84.Text = "5.0-10 X10⁹/L";
             // 
@@ -2325,7 +2345,7 @@
             this.metroLabel66.AutoSize = true;
             this.metroLabel66.Location = new System.Drawing.Point(342, 69);
             this.metroLabel66.Name = "metroLabel66";
-            this.metroLabel66.Size = new System.Drawing.Size(230, 19);
+            this.metroLabel66.Size = new System.Drawing.Size(243, 20);
             this.metroLabel66.TabIndex = 86;
             this.metroLabel66.Text = "F: 4.0-5.0 X10¹²/L | M: 4.5-5.50 X10¹²/L";
             // 
@@ -2334,7 +2354,7 @@
             this.metroLabel42.AutoSize = true;
             this.metroLabel42.Location = new System.Drawing.Point(342, 50);
             this.metroLabel42.Name = "metroLabel42";
-            this.metroLabel42.Size = new System.Drawing.Size(241, 19);
+            this.metroLabel42.Size = new System.Drawing.Size(256, 20);
             this.metroLabel42.TabIndex = 85;
             this.metroLabel42.Text = "F: 0.37-0.45 gms/L | M: 0.40-0.50 gms/L";
             // 
@@ -2343,7 +2363,7 @@
             this.metroLabel38.AutoSize = true;
             this.metroLabel38.Location = new System.Drawing.Point(342, 31);
             this.metroLabel38.Name = "metroLabel38";
-            this.metroLabel38.Size = new System.Drawing.Size(221, 19);
+            this.metroLabel38.Size = new System.Drawing.Size(232, 20);
             this.metroLabel38.TabIndex = 84;
             this.metroLabel38.Text = "F: 120-150 gms/L | M: 130-170 gms/L";
             // 
@@ -2353,7 +2373,7 @@
             this.lblHemaErySed.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaErySed.Location = new System.Drawing.Point(294, 295);
             this.lblHemaErySed.Name = "lblHemaErySed";
-            this.lblHemaErySed.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaErySed.Size = new System.Drawing.Size(21, 20);
             this.lblHemaErySed.TabIndex = 83;
             this.lblHemaErySed.Text = "--";
             // 
@@ -2362,7 +2382,7 @@
             this.metroLabel86.AutoSize = true;
             this.metroLabel86.Location = new System.Drawing.Point(6, 295);
             this.metroLabel86.Name = "metroLabel86";
-            this.metroLabel86.Size = new System.Drawing.Size(282, 19);
+            this.metroLabel86.Size = new System.Drawing.Size(299, 20);
             this.metroLabel86.TabIndex = 82;
             this.metroLabel86.Text = "Erythrocyte Sedimentation Rate (Westergreen):";
             // 
@@ -2372,7 +2392,7 @@
             this.lblHemaTotal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaTotal.Location = new System.Drawing.Point(294, 257);
             this.lblHemaTotal.Name = "lblHemaTotal";
-            this.lblHemaTotal.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaTotal.Size = new System.Drawing.Size(21, 20);
             this.lblHemaTotal.TabIndex = 78;
             this.lblHemaTotal.Text = "--";
             // 
@@ -2381,7 +2401,7 @@
             this.metroLabel82.AutoSize = true;
             this.metroLabel82.Location = new System.Drawing.Point(249, 257);
             this.metroLabel82.Name = "metroLabel82";
-            this.metroLabel82.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel82.Size = new System.Drawing.Size(40, 20);
             this.metroLabel82.TabIndex = 77;
             this.metroLabel82.Text = "Total:";
             // 
@@ -2391,7 +2411,7 @@
             this.lblHemaMonocyte.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaMonocyte.Location = new System.Drawing.Point(294, 238);
             this.lblHemaMonocyte.Name = "lblHemaMonocyte";
-            this.lblHemaMonocyte.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaMonocyte.Size = new System.Drawing.Size(21, 20);
             this.lblHemaMonocyte.TabIndex = 76;
             this.lblHemaMonocyte.Text = "--";
             // 
@@ -2400,7 +2420,7 @@
             this.metroLabel79.AutoSize = true;
             this.metroLabel79.Location = new System.Drawing.Point(218, 238);
             this.metroLabel79.Name = "metroLabel79";
-            this.metroLabel79.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel79.Size = new System.Drawing.Size(74, 20);
             this.metroLabel79.TabIndex = 75;
             this.metroLabel79.Text = "Monocyte:";
             // 
@@ -2410,7 +2430,7 @@
             this.lblHemaLymphocyte.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaLymphocyte.Location = new System.Drawing.Point(294, 219);
             this.lblHemaLymphocyte.Name = "lblHemaLymphocyte";
-            this.lblHemaLymphocyte.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaLymphocyte.Size = new System.Drawing.Size(21, 20);
             this.lblHemaLymphocyte.TabIndex = 74;
             this.lblHemaLymphocyte.Text = "--";
             // 
@@ -2419,7 +2439,7 @@
             this.metroLabel74.AutoSize = true;
             this.metroLabel74.Location = new System.Drawing.Point(207, 219);
             this.metroLabel74.Name = "metroLabel74";
-            this.metroLabel74.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel74.Size = new System.Drawing.Size(87, 20);
             this.metroLabel74.TabIndex = 73;
             this.metroLabel74.Text = "Lymphocyte:";
             // 
@@ -2429,7 +2449,7 @@
             this.lblHemaBasophil.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaBasophil.Location = new System.Drawing.Point(294, 200);
             this.lblHemaBasophil.Name = "lblHemaBasophil";
-            this.lblHemaBasophil.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaBasophil.Size = new System.Drawing.Size(21, 20);
             this.lblHemaBasophil.TabIndex = 72;
             this.lblHemaBasophil.Text = "--";
             // 
@@ -2438,7 +2458,7 @@
             this.metroLabel70.AutoSize = true;
             this.metroLabel70.Location = new System.Drawing.Point(227, 200);
             this.metroLabel70.Name = "metroLabel70";
-            this.metroLabel70.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel70.Size = new System.Drawing.Size(63, 20);
             this.metroLabel70.TabIndex = 71;
             this.metroLabel70.Text = "Basophil:";
             // 
@@ -2463,7 +2483,7 @@
             this.lblHemaStab.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaStab.Location = new System.Drawing.Point(294, 162);
             this.lblHemaStab.Name = "lblHemaStab";
-            this.lblHemaStab.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaStab.Size = new System.Drawing.Size(21, 20);
             this.lblHemaStab.TabIndex = 69;
             this.lblHemaStab.Text = "--";
             // 
@@ -2472,7 +2492,7 @@
             this.metroLabel32.AutoSize = true;
             this.metroLabel32.Location = new System.Drawing.Point(250, 162);
             this.metroLabel32.Name = "metroLabel32";
-            this.metroLabel32.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel32.Size = new System.Drawing.Size(38, 20);
             this.metroLabel32.TabIndex = 68;
             this.metroLabel32.Text = "Stab:";
             // 
@@ -2482,7 +2502,7 @@
             this.lblHemaClottingTime.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaClottingTime.Location = new System.Drawing.Point(294, 352);
             this.lblHemaClottingTime.Name = "lblHemaClottingTime";
-            this.lblHemaClottingTime.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaClottingTime.Size = new System.Drawing.Size(21, 20);
             this.lblHemaClottingTime.TabIndex = 65;
             this.lblHemaClottingTime.Text = "--";
             // 
@@ -2491,7 +2511,7 @@
             this.metroLabel50.AutoSize = true;
             this.metroLabel50.Location = new System.Drawing.Point(107, 352);
             this.metroLabel50.Name = "metroLabel50";
-            this.metroLabel50.Size = new System.Drawing.Size(181, 19);
+            this.metroLabel50.Size = new System.Drawing.Size(187, 20);
             this.metroLabel50.TabIndex = 64;
             this.metroLabel50.Text = "Clotting Time (Slide Method):";
             // 
@@ -2501,7 +2521,7 @@
             this.lblHemaThrombocyte.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaThrombocyte.Location = new System.Drawing.Point(294, 314);
             this.lblHemaThrombocyte.Name = "lblHemaThrombocyte";
-            this.lblHemaThrombocyte.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaThrombocyte.Size = new System.Drawing.Size(21, 20);
             this.lblHemaThrombocyte.TabIndex = 63;
             this.lblHemaThrombocyte.Text = "--";
             // 
@@ -2510,7 +2530,7 @@
             this.metroLabel61.AutoSize = true;
             this.metroLabel61.Location = new System.Drawing.Point(50, 314);
             this.metroLabel61.Name = "metroLabel61";
-            this.metroLabel61.Size = new System.Drawing.Size(238, 19);
+            this.metroLabel61.Size = new System.Drawing.Size(251, 20);
             this.metroLabel61.TabIndex = 62;
             this.metroLabel61.Text = "Thrombocyte Number Fraction (SLIDE):";
             // 
@@ -2520,7 +2540,7 @@
             this.lblHemaBleedingTime.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaBleedingTime.Location = new System.Drawing.Point(294, 333);
             this.lblHemaBleedingTime.Name = "lblHemaBleedingTime";
-            this.lblHemaBleedingTime.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaBleedingTime.Size = new System.Drawing.Size(21, 20);
             this.lblHemaBleedingTime.TabIndex = 47;
             this.lblHemaBleedingTime.Text = "--";
             // 
@@ -2529,7 +2549,7 @@
             this.metroLabel89.AutoSize = true;
             this.metroLabel89.Location = new System.Drawing.Point(95, 333);
             this.metroLabel89.Name = "metroLabel89";
-            this.metroLabel89.Size = new System.Drawing.Size(193, 19);
+            this.metroLabel89.Size = new System.Drawing.Size(205, 20);
             this.metroLabel89.TabIndex = 46;
             this.metroLabel89.Text = "Bleeding Time (Duke\'s Method):";
             // 
@@ -2539,7 +2559,7 @@
             this.lblHemaEosinophil.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaEosinophil.Location = new System.Drawing.Point(294, 181);
             this.lblHemaEosinophil.Name = "lblHemaEosinophil";
-            this.lblHemaEosinophil.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaEosinophil.Size = new System.Drawing.Size(21, 20);
             this.lblHemaEosinophil.TabIndex = 45;
             this.lblHemaEosinophil.Text = "--";
             // 
@@ -2548,7 +2568,7 @@
             this.metroLabel94.AutoSize = true;
             this.metroLabel94.Location = new System.Drawing.Point(217, 181);
             this.metroLabel94.Name = "metroLabel94";
-            this.metroLabel94.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel94.Size = new System.Drawing.Size(75, 20);
             this.metroLabel94.TabIndex = 44;
             this.metroLabel94.Text = "Eosinophil:";
             // 
@@ -2558,7 +2578,7 @@
             this.lblHemaSegmenters.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaSegmenters.Location = new System.Drawing.Point(294, 143);
             this.lblHemaSegmenters.Name = "lblHemaSegmenters";
-            this.lblHemaSegmenters.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaSegmenters.Size = new System.Drawing.Size(21, 20);
             this.lblHemaSegmenters.TabIndex = 43;
             this.lblHemaSegmenters.Text = "--";
             // 
@@ -2567,7 +2587,7 @@
             this.metroLabel96.AutoSize = true;
             this.metroLabel96.Location = new System.Drawing.Point(207, 143);
             this.metroLabel96.Name = "metroLabel96";
-            this.metroLabel96.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel96.Size = new System.Drawing.Size(86, 20);
             this.metroLabel96.TabIndex = 42;
             this.metroLabel96.Text = "Segmenters:";
             // 
@@ -2577,7 +2597,7 @@
             this.lblHemaNeutrophil.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaNeutrophil.Location = new System.Drawing.Point(294, 124);
             this.lblHemaNeutrophil.Name = "lblHemaNeutrophil";
-            this.lblHemaNeutrophil.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaNeutrophil.Size = new System.Drawing.Size(21, 20);
             this.lblHemaNeutrophil.TabIndex = 41;
             this.lblHemaNeutrophil.Text = "--";
             // 
@@ -2586,7 +2606,7 @@
             this.metroLabel98.AutoSize = true;
             this.metroLabel98.Location = new System.Drawing.Point(110, 124);
             this.metroLabel98.Name = "metroLabel98";
-            this.metroLabel98.Size = new System.Drawing.Size(178, 19);
+            this.metroLabel98.Size = new System.Drawing.Size(187, 20);
             this.metroLabel98.TabIndex = 40;
             this.metroLabel98.Text = "Neutrophil Number Fraction:";
             // 
@@ -2596,7 +2616,7 @@
             this.lblHemaLeukocyte.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaLeukocyte.Location = new System.Drawing.Point(294, 86);
             this.lblHemaLeukocyte.Name = "lblHemaLeukocyte";
-            this.lblHemaLeukocyte.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaLeukocyte.Size = new System.Drawing.Size(21, 20);
             this.lblHemaLeukocyte.TabIndex = 39;
             this.lblHemaLeukocyte.Text = "--";
             // 
@@ -2605,7 +2625,7 @@
             this.metroLabel100.AutoSize = true;
             this.metroLabel100.Location = new System.Drawing.Point(80, 86);
             this.metroLabel100.Name = "metroLabel100";
-            this.metroLabel100.Size = new System.Drawing.Size(208, 19);
+            this.metroLabel100.Size = new System.Drawing.Size(223, 20);
             this.metroLabel100.TabIndex = 38;
             this.metroLabel100.Text = "Leukocyte Number Concentration:";
             // 
@@ -2615,7 +2635,7 @@
             this.lblHemaEryNum.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaEryNum.Location = new System.Drawing.Point(294, 67);
             this.lblHemaEryNum.Name = "lblHemaEryNum";
-            this.lblHemaEryNum.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaEryNum.Size = new System.Drawing.Size(21, 20);
             this.lblHemaEryNum.TabIndex = 33;
             this.lblHemaEryNum.Text = "--";
             // 
@@ -2624,7 +2644,7 @@
             this.metroLabel106.AutoSize = true;
             this.metroLabel106.Location = new System.Drawing.Point(75, 67);
             this.metroLabel106.Name = "metroLabel106";
-            this.metroLabel106.Size = new System.Drawing.Size(213, 19);
+            this.metroLabel106.Size = new System.Drawing.Size(227, 20);
             this.metroLabel106.TabIndex = 32;
             this.metroLabel106.Text = "Erythrocye Number Concentration:";
             // 
@@ -2634,7 +2654,7 @@
             this.lblHemaEryVol.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaEryVol.Location = new System.Drawing.Point(294, 48);
             this.lblHemaEryVol.Name = "lblHemaEryVol";
-            this.lblHemaEryVol.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaEryVol.Size = new System.Drawing.Size(21, 20);
             this.lblHemaEryVol.TabIndex = 31;
             this.lblHemaEryVol.Text = "--";
             // 
@@ -2643,7 +2663,7 @@
             this.metroLabel108.AutoSize = true;
             this.metroLabel108.Location = new System.Drawing.Point(111, 48);
             this.metroLabel108.Name = "metroLabel108";
-            this.metroLabel108.Size = new System.Drawing.Size(177, 19);
+            this.metroLabel108.Size = new System.Drawing.Size(188, 20);
             this.metroLabel108.TabIndex = 30;
             this.metroLabel108.Text = "Erythrocyte Volume Fraction:";
             // 
@@ -2653,7 +2673,7 @@
             this.lblHemaHemoglobin.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblHemaHemoglobin.Location = new System.Drawing.Point(294, 29);
             this.lblHemaHemoglobin.Name = "lblHemaHemoglobin";
-            this.lblHemaHemoglobin.Size = new System.Drawing.Size(21, 19);
+            this.lblHemaHemoglobin.Size = new System.Drawing.Size(21, 20);
             this.lblHemaHemoglobin.TabIndex = 29;
             this.lblHemaHemoglobin.Text = "--";
             // 
@@ -2662,7 +2682,7 @@
             this.metroLabel110.AutoSize = true;
             this.metroLabel110.Location = new System.Drawing.Point(91, 29);
             this.metroLabel110.Name = "metroLabel110";
-            this.metroLabel110.Size = new System.Drawing.Size(197, 19);
+            this.metroLabel110.Size = new System.Drawing.Size(206, 20);
             this.metroLabel110.TabIndex = 28;
             this.metroLabel110.Text = "Hemoglobin Concetration Mass:";
             // 
@@ -2692,6 +2712,21 @@
             this.grpMiscellaneous.TabIndex = 72;
             this.grpMiscellaneous.TabStop = false;
             this.grpMiscellaneous.Text = "Miscellaneous";
+            // 
+            // btnMiscUpdate
+            // 
+            this.btnMiscUpdate.BackColor = System.Drawing.Color.Green;
+            this.btnMiscUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMiscUpdate.Location = new System.Drawing.Point(474, 267);
+            this.btnMiscUpdate.Name = "btnMiscUpdate";
+            this.btnMiscUpdate.Size = new System.Drawing.Size(109, 50);
+            this.btnMiscUpdate.TabIndex = 74;
+            this.btnMiscUpdate.Text = "UPDATE";
+            this.btnMiscUpdate.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnMiscUpdate.UseCustomBackColor = true;
+            this.btnMiscUpdate.UseCustomForeColor = true;
+            this.btnMiscUpdate.UseSelectable = true;
+            this.btnMiscUpdate.Click += new System.EventHandler(this.btnMiscUpdate_Click);
             // 
             // lblMiscSpecimen
             // 
@@ -2891,41 +2926,33 @@
             this.btnUpdateRecord.UseSelectable = true;
             this.btnUpdateRecord.Click += new System.EventHandler(this.btnUpdateRecord_Click);
             // 
-            // btnUriUpdate
+            // cboYear
             // 
-            this.btnUriUpdate.BackColor = System.Drawing.Color.Green;
-            this.btnUriUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUriUpdate.Location = new System.Drawing.Point(474, 267);
-            this.btnUriUpdate.Name = "btnUriUpdate";
-            this.btnUriUpdate.Size = new System.Drawing.Size(109, 50);
-            this.btnUriUpdate.TabIndex = 73;
-            this.btnUriUpdate.Text = "UPDATE";
-            this.btnUriUpdate.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnUriUpdate.UseCustomBackColor = true;
-            this.btnUriUpdate.UseCustomForeColor = true;
-            this.btnUriUpdate.UseSelectable = true;
-            this.btnUriUpdate.Click += new System.EventHandler(this.btnUriUpdate_Click);
+            this.cboYear.FormattingEnabled = true;
+            this.cboYear.ItemHeight = 24;
+            this.cboYear.Location = new System.Drawing.Point(622, 83);
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(109, 30);
+            this.cboYear.TabIndex = 73;
+            this.cboYear.UseSelectable = true;
+            this.cboYear.SelectedIndexChanged += new System.EventHandler(this.cboYear_SelectedIndexChanged);
             // 
-            // btnMiscUpdate
+            // grpEmpty
             // 
-            this.btnMiscUpdate.BackColor = System.Drawing.Color.Green;
-            this.btnMiscUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMiscUpdate.Location = new System.Drawing.Point(474, 267);
-            this.btnMiscUpdate.Name = "btnMiscUpdate";
-            this.btnMiscUpdate.Size = new System.Drawing.Size(109, 50);
-            this.btnMiscUpdate.TabIndex = 74;
-            this.btnMiscUpdate.Text = "UPDATE";
-            this.btnMiscUpdate.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnMiscUpdate.UseCustomBackColor = true;
-            this.btnMiscUpdate.UseCustomForeColor = true;
-            this.btnMiscUpdate.UseSelectable = true;
-            this.btnMiscUpdate.Click += new System.EventHandler(this.btnMiscUpdate_Click);
+            this.grpEmpty.Location = new System.Drawing.Point(738, 253);
+            this.grpEmpty.Name = "grpEmpty";
+            this.grpEmpty.Size = new System.Drawing.Size(589, 379);
+            this.grpEmpty.TabIndex = 79;
+            this.grpEmpty.TabStop = false;
+            this.grpEmpty.Text = "Details";
             // 
             // frmPatients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1374, 722);
+            this.Controls.Add(this.grpEmpty);
+            this.Controls.Add(this.cboYear);
             this.Controls.Add(this.btnUpdateRecord);
             this.Controls.Add(this.gridTrans);
             this.Controls.Add(this.grpPatientInfo);
@@ -3205,5 +3232,7 @@
         private MetroFramework.Controls.MetroButton btnParaUpdate;
         private MetroFramework.Controls.MetroButton btnUriUpdate;
         private MetroFramework.Controls.MetroButton btnMiscUpdate;
+        private MetroFramework.Controls.MetroComboBox cboYear;
+        private System.Windows.Forms.GroupBox grpEmpty;
     }
 }

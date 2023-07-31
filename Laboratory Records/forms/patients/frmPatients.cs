@@ -24,6 +24,8 @@ namespace Laboratory_Records.forms.patients
         functions.Parasitology parasitology = new functions.Parasitology();
         functions.Urinalysis urinalysis = new functions.Urinalysis();
 
+        private DataTable originalDataTable;
+
         public frmPatients()
         {
             InitializeComponent();
@@ -36,13 +38,34 @@ namespace Laboratory_Records.forms.patients
             SetPatienInfo();
             trans.LoadTransactions(val.RecordID, gridTrans);
             lblPatientCount.Text = String.Format("Patient Count: {0}", val.PatientCount.ToString());
+            PopulateYear();
+            originalDataTable = (DataTable)gridPatients.DataSource;
         }
 
         private void txtKeyword_TextChanged(object sender, EventArgs e)
         {
-            patient.SearchPatient(txtKeyword.Text, gridPatients);
-            record.LoadPatientRecords(val.PatientID, gridRecords);
-            lblPatientCount.Text = String.Format("Patient Count: {0}", val.PatientCount.ToString());
+            string keyword = txtKeyword.Text.Trim();
+
+            if(originalDataTable == null || originalDataTable.Rows.Count == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                var filteredRows = originalDataTable.AsEnumerable()
+                .Where(row =>
+                    row.Field<string>("last_name").IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0
+                ).CopyToDataTable();
+                gridPatients.DataSource = filteredRows;
+                record.LoadPatientRecords(val.PatientID, gridRecords);
+                lblPatientCount.Text = String.Format("Patient Count: {0}", val.PatientCount.ToString());
+                
+            } catch (InvalidOperationException)
+            {
+                gridPatients.DataSource = null;
+            }
+            
         }
 
         private void btnAddPatient_Click(object sender, EventArgs e)
@@ -451,9 +474,37 @@ namespace Laboratory_Records.forms.patients
                     urinalysis.LoadUrinalysisRecord(val.TransID);
                     grpUrinalysis.BringToFront();
                     SetUrinalysisRecord();
-                }
+                } 
                 
+            } else
+            {
+                grpEmpty.BringToFront();
             }
+        }
+
+        /// Populate Dropdown Value 
+        /// <summary>
+        /// Set dropdown values from 2019 to present year
+        /// </summary>
+        private void PopulateYear()
+        {
+            int currentYear = DateTime.Now.Year;
+            int startingYear = 2019;
+
+            for (int year = currentYear; year >= startingYear; year--)
+            {
+                cboYear.Items.Add(year.ToString());
+            }
+
+            cboYear.SelectedIndex = cboYear.Items.IndexOf(currentYear.ToString());
+        }
+
+        private void cboYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            patient.FilterPatientByYear(cboYear.Text, gridPatients);
+            originalDataTable = (DataTable)gridPatients.DataSource;
+            record.LoadPatientRecords(val.PatientID, gridRecords);
+            lblPatientCount.Text = String.Format("Patient Count: {0}", val.PatientCount.ToString());
         }
     }
 }

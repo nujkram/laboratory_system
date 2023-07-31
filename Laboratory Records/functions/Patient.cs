@@ -13,6 +13,7 @@ namespace Laboratory_Records.functions
         components.Connection connection = new components.Connection();
         components.Values val = new components.Values();
         Log Log = new Log();
+        int currentYear = DateTime.Now.Year;
 
         public void LoadPatients(MetroFramework.Controls.MetroGrid grid)
         {
@@ -20,9 +21,10 @@ namespace Laboratory_Records.functions
             {
                 using (MySqlConnection con = new MySqlConnection(connection.conString))
                 {
-                    string sql = @"SELECT * FROM mmg_lab.tblpatients ORDER BY created DESC;";
+                    string sql = @"SELECT * FROM mmg_lab.tblpatients WHERE YEAR(created) = @year ORDER BY created DESC LIMIT 100;";
                     using (MySqlCommand cmd = new MySqlCommand(sql, con))
                     {
+                        cmd.Parameters.AddWithValue("@year", currentYear);
                         MySqlDataAdapter da = new MySqlDataAdapter();
                         da.SelectCommand = cmd;
                         DataTable dt = new DataTable();
@@ -38,7 +40,7 @@ namespace Laboratory_Records.functions
                             // Set column headers
                             grid.Columns["id"].Visible = false;
                             grid.Columns["first_name"].HeaderText = "First Name";
-                            grid.Columns["middle_name"].HeaderText = "Middle Initial";
+                            grid.Columns["middle_name"].HeaderText = "Middle Init";
                             grid.Columns["last_name"].HeaderText = "Last Name";
                             grid.Columns["gender"].Visible = false;
                             grid.Columns["birth_date"].Visible = false;
@@ -224,6 +226,54 @@ namespace Laboratory_Records.functions
                 Console.WriteLine("Error Searching Patient: " + error);
                 Log.AddLog(val.UserID, "Error Searching Patient: " + error.ToString());
             } 
+        }
+
+        /// <summary>
+        /// Filter patient record by year 
+        /// </summary>
+        /// <param year="year"></param>
+        public void FilterPatientByYear(string year, MetroFramework.Controls.MetroGrid grid)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(connection.conString))
+                {
+                    string sql = @"SELECT * 
+                                FROM mmg_lab.tblpatients WHERE YEAR(created) = @year ORDER BY created DESC";
+                    using (MySqlCommand cmd = new MySqlCommand(sql, con))
+                    {
+                        cmd.Parameters.AddWithValue("@year", year);
+
+                        MySqlDataAdapter da = new MySqlDataAdapter();
+                        da.SelectCommand = cmd;
+                        DataTable dt = new DataTable();
+                        dt.Clear();
+                        da.Fill(dt);
+                        grid.DataSource = dt;
+
+                        // Get number of records
+                        val.PatientCount = dt.Rows.Count;
+
+                        // Set column headers
+                        grid.Columns["id"].HeaderText = "ID";
+                        grid.Columns["first_name"].HeaderText = "First Name";
+                        grid.Columns["middle_name"].HeaderText = "Middle Initial";
+                        grid.Columns["last_name"].HeaderText = "Last Name";
+                        grid.Columns["gender"].Visible = false;
+                        grid.Columns["birth_date"].Visible = false;
+                        grid.Columns["age"].Visible = false;
+                        grid.Columns["address"].Visible = false;
+                        grid.Columns["created"].Visible = false;
+
+                        GetPatientDetail(0, grid);
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error Searching Patient: " + error);
+                Log.AddLog(val.UserID, "Error Searching Patient: " + error.ToString());
+            }
         }
     }
 }
